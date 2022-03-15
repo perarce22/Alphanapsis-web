@@ -41,6 +41,7 @@ namespace USD.Alphanapsis.Api
         {
             services.AddDbContext<ApplicationDbContext>(Options => Options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            services.AddScoped<IContenidoRepository, ContenidoRepository>();
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
@@ -73,6 +74,25 @@ namespace USD.Alphanapsis.Api
                         Url = new Uri("https://en.wikipedia.org/wiki/MIT_License")
                     }
                 });
+
+                options.SwaggerDoc("ApiIdioma", new Microsoft.OpenApi.Models.OpenApiInfo()
+                {
+                    Title = "API Languaje",
+                    Version = "1",
+                    Description = "Backend Languaje",
+                    Contact = new Microsoft.OpenApi.Models.OpenApiContact()
+                    {
+                        Email = "admin@usd.com",
+                        Name = "USD",
+                        Url = new Uri("https://usd.com")
+                    },
+                    License = new Microsoft.OpenApi.Models.OpenApiLicense()
+                    {
+                        Name = "MIT License",
+                        Url = new Uri("https://en.wikipedia.org/wiki/MIT_License")
+                    }
+                });
+
 
                 var archivoXmlComentarios = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var rutaApiComentarios = Path.Combine(AppContext.BaseDirectory, archivoXmlComentarios);
@@ -139,7 +159,8 @@ namespace USD.Alphanapsis.Api
             app.UseSwagger();
             app.UseSwaggerUI(options =>
             {
-                options.SwaggerEndpoint("/swagger/ApiAuth/swagger.json", "API Auth"); 
+                options.SwaggerEndpoint("/swagger/ApiAuth/swagger.json", "API Auth");
+                options.SwaggerEndpoint("/swagger/ApiIdioma/swagger.json", "API Languaje");
                 options.RoutePrefix = "";
             });
 
