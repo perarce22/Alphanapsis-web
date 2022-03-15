@@ -3,3 +3,16 @@
 ################################################################################
 
 /BackEnd/.vs/USD.Alphanapsis/config
+/BackEnd/USD.Alphanapsis.Api/bin
+/BackEnd/USD.Alphanapsis.Api/obj
+/BackEnd/USD.Alphanapsis.Data/bin/Debug/netcoreapp3.1
+/BackEnd/USD.Alphanapsis.Data/obj
+/BackEnd/USD.Alphanapsis.Dto/bin/Debug/netcoreapp3.1
+/BackEnd/USD.Alphanapsis.Dto/obj
+/BackEnd/USD.Alphanapsis.Entidades/.vs/USD.Alphanapsis.Entidades/DesignTimeBuild
+/BackEnd/USD.Alphanapsis.Entidades/bin/Debug/netcoreapp3.1
+/BackEnd/USD.Alphanapsis.Entidades/obj
+/BackEnd/USD.Alphanapsis.Servicios/bin/Debug/netcoreapp3.1
+/BackEnd/USD.Alphanapsis.Servicios/obj
+/BackEnd/USD.Alphanapsis.Utiles/bin/Debug/netcoreapp3.1
+/BackEnd/USD.Alphanapsis.Utiles/obj

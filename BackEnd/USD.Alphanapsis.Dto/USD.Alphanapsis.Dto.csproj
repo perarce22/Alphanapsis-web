@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\USD.Alphanapsis.Entidades\USD.Alphanapsis.Entidades.csproj" />
+    <ProjectReference Include="..\USD.Alphanapsis.Utiles\USD.Alphanapsis.Utiles.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Request\" />
+  </ItemGroup>
+
+</Project>
