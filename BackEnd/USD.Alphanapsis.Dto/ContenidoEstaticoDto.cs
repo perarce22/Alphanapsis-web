@@ -13,7 +13,6 @@ namespace USD.Alphanapsis.Dto
         public int ContenidoEstaticoId { get; set; }
 
         [Required]
-       
         [MaxLength(200)]
         public string Campo { get; set; }
 

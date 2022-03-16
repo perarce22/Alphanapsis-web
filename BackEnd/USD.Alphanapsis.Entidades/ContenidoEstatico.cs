@@ -13,7 +13,7 @@ namespace USD.Alphanapsis.Entidades
     {
         public int ContenidoEstaticoId { get; set; }
 
-        [Required]
+        
         [Column(TypeName = "NVARCHAR")]
         [MaxLength(200)]
         public string Campo { get; set; }
