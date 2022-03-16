@@ -9,5 +9,9 @@ namespace USD.Alphanapsis.Servicios.Repository
     {
         private readonly ApplicationDbContext _bd;
         NLog.Logger logger = NLog.Web.NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
+        public IdiomaRepository(ApplicationDbContext bd)
+        {
+            _bd = bd;
+        }
     }
 }
