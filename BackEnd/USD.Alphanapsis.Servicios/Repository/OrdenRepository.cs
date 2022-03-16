@@ -4,7 +4,7 @@ using System.Text;
 
 namespace USD.Alphanapsis.Servicios.Repository
 {
-    class OrdenRepository
+    public class OrdenRepository
     {
     }
 }
