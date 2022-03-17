@@ -1,11 +1,9 @@
-﻿using System;
+﻿using Microsoft.Extensions.Configuration;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Configuration;
-using System.Drawing;
+using System.ComponentModel; 
 using System.IO;
-using System.Reflection;
-using System.Web;
+using System.Reflection; 
 
 namespace USD.Alphanapsis.Utiles
 {
@@ -94,14 +92,41 @@ namespace USD.Alphanapsis.Utiles
         }
 
 
-        //public static T Get<T>(string key)
-        //{
-        //    var appSetting = ConfigurationManager.AppSettings[key];
-        //    if (string.IsNullOrWhiteSpace(appSetting)) return default(T);
+        public static T Get<T>(string key)
+        {
+            var builder = new ConfigurationBuilder();
+            IConfigurationRoot configurationRoot = null;
+            string path = Path.Combine(Directory.GetCurrentDirectory(), GetAppSettingsFile());
+            builder.AddJsonFile(path, false);
+            configurationRoot = builder.Build();
 
-        //    var converter = TypeDescriptor.GetConverter(typeof(T));
-        //    return (T)(converter.ConvertFromInvariantString(appSetting));
-        //}
+            var appSetting = configurationRoot.GetSection("AppSettings").GetSection(key).Value;
+            if (string.IsNullOrWhiteSpace(appSetting)) return default(T);
+
+            var converter = TypeDescriptor.GetConverter(typeof(T));
+            return (T)(converter.ConvertFromInvariantString(appSetting));
+        }
+
+        public static string GetAppSettingsFile()
+        {
+            string _env = "dev";
+            try
+            {
+                var config = new ConfigurationBuilder()
+                                    .AddJsonFile("appsettings.json", false)
+                                    .Build();
+
+                _env = config.GetSection("Environment").Value;
+            }
+            catch (Exception)
+            {
+                _env = "dev";
+            }
+
+            var fileName = $"appsettings.{_env}.json";
+            return fileName;
+        }
+
         public static T Convert<T>(string key)
         {
             if (string.IsNullOrWhiteSpace(key)) return default(T);

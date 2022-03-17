@@ -87,6 +87,14 @@ namespace USD.Alphanapsis.Entidades
         [ForeignKey("TipoPacienteId")]
         public TipoPaciente TipoPaciente { get; set; }
 
-        
+
+        [NotMapped]
+        public List<OrdenPaqueteDetalle> OrdenPaqueteDetalles { get; set; }
+        [NotMapped]
+        public List<int> Paquetes { get; set; }
+        [NotMapped]
+        public int EquipoId { get; set; }
+        [NotMapped]
+        public string NroOrden { get; set; }
     }
 }
