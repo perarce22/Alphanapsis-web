@@ -1,10 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using USD.Alphanapsis.Data;
 
 namespace USD.Alphanapsis.Servicios.Repository
 {
-    class TipoInterfazRepository
+    public class TipoInterfazRepository
     {
+        private readonly ApplicationDbContext _bd;
+        NLog.Logger logger = NLog.Web.NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
+        public TipoInterfazRepository(ApplicationDbContext bd)
+        {
+            _bd = bd;
+        }
     }
 }
