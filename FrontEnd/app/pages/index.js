@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Form, Row, Col } from 'react-bootstrap';
-// import styles from '../styles/Home.module.css'
+import Link from 'next/link'
+import { Form, Row, Col, Button } from 'react-bootstrap';
 import styles from '../styles/Auth.module.scss'
+import { IconFb, IconGoogle } from '../public/icons'
 
 export default function Home() {
   return (
@@ -23,33 +23,20 @@ export default function Home() {
           <div className={styles.block_logo}>
             <img className={styles.block_logo_img} src='/img/logo-2.png' />
           </div>
-          <h4 className={styles.title}>Crear Cuenta</h4>
           <Form.Group className='form-group'>
-            <Form.Control type="text" placeholder="Nombre completo" />
+            <Form.Control type="text" placeholder="Ingrese su usuario" />
           </Form.Group>
           <Form.Group className='form-group'>
-            <Form.Control type="text" placeholder="Correo Electrónico" />
+            <Form.Control type="text" placeholder="Contraseña" />
           </Form.Group>
-          <Row className='form-row'>
-            <Col>
-              <Form.Group className='form-group'>
-                <Form.Select>
-                  <option>Tipo Documento</option>
-                </Form.Select>
-              </Form.Group>
-            </Col>
-            <Col>
-              <Form.Group className='form-group'>
-                <Form.Control type="text" placeholder="N° Documento" />
-              </Form.Group>
-            </Col>
-          </Row>
-          <Form.Group className='form-group'>
-            <Form.Select>
-              <option>Sede</option>
-            </Form.Select>
-          </Form.Group>
+          <Button>Iniciar Sesion</Button>
+          <a href='#'>Olvidó su contraseña?</a>
+          <div className='d-flex justify-content-around'>
+            <button className='btn btn-social'><IconFb />Iniciar Sesión</button>
+            <button className='btn btn-social'><IconGoogle />Iniciar Sesión</button>
+          </div>
         </div>
+        <p>¿No tiene cuenta? <Link href="/registro">Cree Cuenta</Link></p>
       </div>
     </div>
   )
