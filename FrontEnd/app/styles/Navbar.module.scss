@@ -1,0 +1,21 @@
+@import "./globals.scss";
+
+.navbar {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  border-radius: 10px;
+  p {
+    font-size: 20px;
+    margin-bottom: 0;
+    margin-left: 15px;
+  }
+  h6 {
+    margin-left: auto;
+    margin-bottom: 0;
+    color: #4f93a0;
+    font-weight: normal;
+    margin-right: 10px;
+  }
+}

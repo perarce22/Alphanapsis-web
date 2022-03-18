@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Form, Row, Col, Button } from 'react-bootstrap';
 import styles from '../styles/Auth.module.scss'
 
-export default function Registro() {
+function Registro() {
   return (
     <div className={styles.auth_container}>
       <Head>
@@ -53,5 +53,15 @@ export default function Registro() {
         <p>Ya tiene una cuenta? <Link href="/">Login</Link></p>
       </div>
     </div>
+  )
+}
+
+export default Registro;
+
+Registro.getLayout = function PageLayout(page) {
+  return (
+    <>
+      {page}
+    </>
   )
 }

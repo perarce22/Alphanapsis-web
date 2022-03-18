@@ -1,9 +1,14 @@
+import Sidebar from "../global/sidebar"
+import Navbar from "../global/navbar"
+
 const Layout = ({children}) => {
   return (
-    <div>
-      NAVBAR
-      {children}
-      FOOTER
+    <div id="main-wrapper">
+      <Sidebar />
+      <div className="content-body">
+        <Navbar />
+        {children}
+      </div>
     </div>
   )
 }

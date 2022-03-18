@@ -1,0 +1,54 @@
+@import "./globals.scss";
+
+.sidebar {
+  width: 100%;
+  max-width: 150px;
+  padding-bottom: 0;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 22;
+  transition: all 0.2s ease;
+  flex-wrap: inherit;
+  display: flex;
+  flex-direction: column;
+  ul {
+    padding-left: 0;
+    list-style: none;
+  }
+}
+.item {
+  border-top: 1px solid #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  svg {
+    width: 50px;
+    height: 40px;
+    fill: #fff;
+  }
+  &:last-child {
+    border-bottom: 1px solid #fff;
+  }
+}
+.item_active {
+  background-color: $gris;
+  border: none;
+  &::before {
+    content: "";
+    width: 14px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: $celeste;
+  }
+}
+.logo {
+  padding: 30px 20px;
+  text-align: center;
+  svg {
+    width: 90px;
+    height: 90px;
+  }
+}

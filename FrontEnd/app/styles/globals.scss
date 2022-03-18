@@ -59,6 +59,24 @@
   }
 }
 
+#main-wrapper {
+  transition: all 0.25s ease-in;
+  position: relative;
+  background: $azul;
+  min-height: 100vh;
+}
+
+.content-body {
+  margin-left: 150px;
+  z-index: 0;
+  transition: all 0.2s ease;
+  min-height: 100vh;
+  background-color: #eef1f9;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  padding: 30px 15px;
+}
+
 .form-select {
   background: url("../public/img/arrow-select.png") no-repeat right 0.75rem
     center !important;

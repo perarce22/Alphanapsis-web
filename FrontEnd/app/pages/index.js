@@ -4,7 +4,7 @@ import { Form, Row, Col, Button } from 'react-bootstrap';
 import styles from '../styles/Auth.module.scss'
 import { IconFb, IconGoogle } from '../public/icons'
 
-export default function Home() {
+function Home() {
   return (
     <div className={styles.auth_container}>
       <Head>
@@ -39,5 +39,15 @@ export default function Home() {
         <p>¿No tiene cuenta? <Link href="/registro">Cree Cuenta</Link></p>
       </div>
     </div>
+  )
+}
+
+export default Home;
+
+Home.getLayout = function PageLayout(page) {
+  return (
+    <>
+      {page}
+    </>
   )
 }
