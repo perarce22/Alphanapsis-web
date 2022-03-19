@@ -29,14 +29,14 @@ function Home() {
           <Form.Group className='form-group'>
             <Form.Control type="text" placeholder="Contraseña" />
           </Form.Group>
-          <Button>Iniciar Sesion</Button>
+          <Link href="/home"><Button>Iniciar Sesion</Button></Link>
           <a href='#'>Olvidó su contraseña?</a>
           <div className='d-flex justify-content-around'>
             <button className='btn btn-social'><IconFb />Iniciar Sesión</button>
             <button className='btn btn-social'><IconGoogle />Iniciar Sesión</button>
           </div>
         </div>
-        <p>¿No tiene cuenta? <Link href="/registro">Cree Cuenta</Link></p>
+        <p>¿No tiene cuenta? <Link href="/registro">Cree Cuentack</Link></p>
       </div>
     </div>
   )

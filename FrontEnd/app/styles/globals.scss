@@ -82,6 +82,18 @@
     center !important;
 }
 
+.card {
+  border: none !important;
+  padding: 10px 14px;
+  border-radius: 10px !important;
+}
+
+.title_blue {
+  font-size: 20px;
+  font-weight: bold;
+  color: $azul;
+}
+
 @media screen and (max-width: $media-mobile) {
   .card_auth {
     max-width: none;
