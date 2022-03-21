@@ -1,0 +1,21 @@
+.react-date-picker {
+  width: 100%;
+  &__wrapper {
+    background: #ffffff;
+    border: 0.5px solid #cdcdcd !important;
+    border-radius: 7px;
+  }
+  &__clear-button svg {
+    stroke: #b6b9c0;
+  }
+  &__calendar-button {
+    border-left: 0.5px solid #cdcdcd !important;
+    border-radius: 7px;
+    svg {
+      fill: #b6b9c0;
+    }
+  }
+  &__inputGroup {
+    padding: 3px 2px;
+  }
+}

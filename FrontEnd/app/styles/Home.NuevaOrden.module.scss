@@ -1,0 +1,58 @@
+@import "./globals.scss";
+
+.header_section {
+  background-color: $verde-2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  margin-bottom: 20px;
+  h6 {
+    margin-right: auto;
+    margin-bottom: 0;
+    font-size: 25px;
+    font-weight: 800;
+  }
+  label {
+    color: $gris-3;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 8px;
+    margin-left: 16px;
+  }
+  input {
+    width: 164px;
+    border: 0.5px solid #cdcdcd;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 13px;
+    color: $gris-3;
+    box-shadow: 0 0 !important;
+    text-align: center;
+  }
+}
+.fieldset {
+  padding: 22px 17px;
+  border: 4px solid $gris-2;
+  margin-bottom: 14px;
+  border-radius: 7px;
+  legend {
+    float: none;
+    width: auto;
+    padding: 0 2px;
+    color: $azul;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  label {
+    font-size: 14px;
+    color: #5c5c5c;
+  }
+  input,
+  select {
+    border-color: $verde-2;
+    background-color: #f9fdff !important;
+    box-shadow: 0 0 !important;
+  }
+}

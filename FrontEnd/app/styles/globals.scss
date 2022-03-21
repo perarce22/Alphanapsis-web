@@ -1,5 +1,7 @@
 @import "vars";
 @import "fonts";
+@import "./components/rc-table";
+@import "./components/date-picker";
 
 .card_auth {
   background-color: #fff;
@@ -92,6 +94,17 @@
   font-size: 20px;
   font-weight: bold;
   color: $azul;
+}
+.title_section {
+  font-size: 18px;
+  font-weight: normal;
+  color: #231f20;
+}
+.btn-success {
+  background-color: #12d0b6 !important;
+  border-radius: 12.5px !important;
+  border: none !important;
+  min-width: 135px;
 }
 
 @media screen and (max-width: $media-mobile) {

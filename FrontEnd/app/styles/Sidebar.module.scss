@@ -25,7 +25,7 @@
   svg {
     width: 50px;
     height: 40px;
-    fill: #fff;
+    // fill: #fff;
   }
   &:last-child {
     border-bottom: 1px solid #fff;
@@ -42,6 +42,9 @@
     left: 0;
     top: 0;
     background-color: $celeste;
+  }
+  svg {
+    fill: $azul-3;
   }
 }
 .logo {
