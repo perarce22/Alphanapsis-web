@@ -1,35 +1,120 @@
 @import "vars";
 @import "fonts";
+@import "./components/rc-table";
+@import "./components/date-picker";
 
 .card_auth {
   background-color: #fff;
   max-width: 490px;
   margin: auto;
-  padding: 15px 22px;
+  padding: 15px 22px 25px;
   border-radius: 15px;
+  width: 100%;
   .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     .form-control {
       background: #eef1f9;
       border: none;
       // color: #b6b9c0;
-      font-size: 17px;
+      font-size: 14px;
       border-radius: 20px;
-      padding: 7px 22px;
+      padding: 12px 22px;
     }
     .form-select {
       background-color: #eef1f9 !important;
       border: none;
-      font-size: 17px;
+      font-size: 14px;
       border-radius: 20px;
-      padding-top: 7px;
-      padding-bottom: 7px;
+      padding-top: 12px;
+      padding-bottom: 12px;
       padding-left: 22px;
     }
   }
+  a {
+    color: $azul-2;
+    margin: 30px auto;
+    display: block;
+    text-align: center;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .btn-primary {
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: $azul-2 !important;
+    box-shadow: 0 0;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 30px;
+    border: none;
+  }
+  .btn-social {
+    border: 2px solid $azul-2;
+    border-radius: 5px;
+    font-size: 12px;
+    color: $azul-2;
+    svg {
+      margin-right: 6px;
+    }
+  }
+}
+
+#main-wrapper {
+  transition: all 0.25s ease-in;
+  position: relative;
+  background: $azul;
+  min-height: 100vh;
+}
+
+.content-body {
+  margin-left: 150px;
+  z-index: 0;
+  transition: all 0.2s ease;
+  min-height: 100vh;
+  background-color: #eef1f9;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  padding: 30px 15px;
 }
 
 .form-select {
   background: url("../public/img/arrow-select.png") no-repeat right 0.75rem
     center !important;
+}
+
+.card {
+  border: none !important;
+  padding: 10px 14px;
+  border-radius: 10px !important;
+}
+
+.title_blue {
+  font-size: 20px;
+  font-weight: bold;
+  color: $azul;
+}
+.title_section {
+  font-size: 18px;
+  font-weight: normal;
+  color: #231f20;
+}
+.btn-success {
+  background-color: #12d0b6 !important;
+  border-radius: 12.5px !important;
+  border: none !important;
+  min-width: 135px;
+}
+
+@media screen and (max-width: $media-mobile) {
+  .card_auth {
+    max-width: none;
+    border-radius: 0;
+    margin: 0;
+    flex: 1;
+    .btn-social {
+      padding: 9px 6px;
+    }
+  }
 }
