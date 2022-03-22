@@ -1,4 +1,5 @@
 import { Form, Row, Col, Button } from 'react-bootstrap';
+import {IconCamera} from '../../public/icons'
 import styles from '../../styles/Home.module.scss'
 
 function Perfil() {
@@ -7,7 +8,8 @@ function Perfil() {
       <Col md={3}>
           <div className='card h-100'>
             <div className={styles.perfil_photo}>
-              <img src='/img/user.jpg' />
+              <img src='https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=270' />
+              <button className='btn'><IconCamera /></button>
             </div>
             <div className={styles.perfil_dato}><span>Eduardo Inca Ocas</span></div>
             <div className={styles.perfil_dato}><span>eduardo.inca@gmail.com</span></div>

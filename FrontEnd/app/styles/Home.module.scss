@@ -1,9 +1,29 @@
 @import "./globals.scss";
 
 .perfil_photo {
+  max-height: 236px;
+  overflow: hidden;
+  position: relative;
   img {
     width: 100%;
-    max-height: 236px;
+    height: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+  }
+  button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: $azul;
+    padding: 10px 18px;
+    border-radius: 14px;
+    box-shadow: 0 0 !important;
+    svg {
+      fill: #fff;
+      width: 40px;
+      height: 40px;
+    }
   }
 }
 .perfil_dato {
@@ -141,6 +161,41 @@
   a {
     margin-left: auto;
     img {
+      transform: rotate(-90deg);
     }
+  }
+}
+.data_control_logo {
+  background-color: $azul;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  img {
+    max-width: 120px;
+  }
+}
+.data_control {
+  background: #e6ecf7;
+  border-radius: 4px;
+  margin-top: 11px;
+  height: 47px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  span {
+    background-color: $verde-2;
+    color: $verde;
+    padding: 10px 8px;
+    font-size: 10px;
+    font-weight: 600;
+    width: 86px;
+    line-height: 1.2;
+    display: inline-flex;
+    align-items: center;
+    height: 46px;
+  }
+  img {
+    max-width: 110px;
+    margin: 5px auto;
   }
 }
