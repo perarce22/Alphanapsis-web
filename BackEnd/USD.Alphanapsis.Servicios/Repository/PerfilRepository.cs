@@ -49,8 +49,8 @@ namespace USD.Alphanapsis.Servicios.Repository
                  
                 catch (Exception ex)
                 {
-                    log.Error("Error ", ex);
-                    throw new USDException(ExceptionIds.Perfil, "Error en el metodo: List<Perfil>.", new object[] { null });
+                    logger.Error(ex);
+                    throw ex;
                 }
             }
         }
@@ -68,8 +68,8 @@ namespace USD.Alphanapsis.Servicios.Repository
             
             catch (Exception ex)
             {
-                log.Error("Error ", ex);
-                throw new USDException(ExceptionIds.Perfil, "Error en el metodo: ObtenerPerfil.", new object[] { null });
+                logger.Error(ex);
+                throw ex;
             }
         }
 
@@ -88,8 +88,8 @@ namespace USD.Alphanapsis.Servicios.Repository
                
                 catch (Exception ex)
                 {
-                    log.Error("Error ", ex);
-                    throw new USDException(ExceptionIds.Perfil, "Error en el metodo: EliminaServicio.", new object[] { null });
+                    logger.Error(ex);
+                    throw ex;
                 }
             }
         }
@@ -118,8 +118,8 @@ namespace USD.Alphanapsis.Servicios.Repository
                  
                 catch (Exception ex)
                 {
-                    log.Error("Error ", ex);
-                    throw new USDException(ExceptionIds.Perfil, "Error en el metodo: RegistrarServicio.", new object[] { null });
+                    logger.Error(ex);
+                    throw ex;
                 }
             }
         }
@@ -155,8 +155,8 @@ namespace USD.Alphanapsis.Servicios.Repository
                 
                 catch (Exception ex)
                 {
-                    log.Error("Error ", ex);
-                    throw new USDException(ExceptionIds.Perfil, "Error en el metodo: List<Perfil>.", new object[] { null });
+                    logger.Error(ex);
+                    throw ex;
                 }
             }
         }
