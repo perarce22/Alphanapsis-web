@@ -67,7 +67,7 @@ namespace USD.Alphanapsis.Dto
     }
 
 
-    public class ReportResult
+    public class ReportResultDto
     {
         public string NumOrden { get; set; }
         public string Area { get; set; }

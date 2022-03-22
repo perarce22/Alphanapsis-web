@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 using USD.Alphanapsis.Data;
+using USD.Alphanapsis.Dto;
 
 namespace USD.Alphanapsis.Servicios.Repository
 {
@@ -13,5 +15,6 @@ namespace USD.Alphanapsis.Servicios.Repository
         {
             _bd = bd;
         }
+       
     }
 }

@@ -12,7 +12,7 @@ using System.Globalization;
 
 namespace USD.Alphanapsis.Servicios.Repository
 {
-    public class OrdenRepository
+    public class OrdenRepository : IOrdenRepository
     {
         private readonly ApplicationDbContext _bd;
         NLog.Logger logger = NLog.Web.NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
